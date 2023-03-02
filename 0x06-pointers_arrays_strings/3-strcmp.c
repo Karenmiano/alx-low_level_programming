@@ -16,9 +16,9 @@ int _strcmp(char *s1, char *s2)
 
 	for (i = 0, j = 0; (*(s1 + i) != '\0' && *(s2 + i) != '\0') && j == 0; i++)
 		if (*(s1 + i) > *(s2 + i))
-			j = 5;
+			j = 15;
 		else if (*(s1 + i) < *(s2 + i))
-			j = -5;
+			j = -15;
 		else
 			j = 0;
 	return (j);
