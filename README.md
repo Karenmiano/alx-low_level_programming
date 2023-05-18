@@ -1,0 +1,3 @@
+Low-level programming refers to the process of writing computer programs using programming languages that provide minimal abstraction from the underlying hardware and system components. It involves directly interacting with hardware and system resources, such as memory, registers, and I/O devices, to perform specific tasks.
+
+Low-level programming is typically done using languages like assembly language or languages that provide a close correspondence to machine code instructions. To have a feel of what low-level programming is alx teaches us the C programming language. This repo will contain my journey through C.
