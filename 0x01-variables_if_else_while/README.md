@@ -1,0 +1,1 @@
+From hello world into the deep. Topics covered so far: comments, Data types, Declaration, Characters, Arithmetic operators, Variables assignments, Comparisons or relational operators, Logical operators, if, if…else, while loops.
