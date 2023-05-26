@@ -1,23 +1,27 @@
 #include "main.h"
-
+/**
+ * print_diagonal - function that prints a sized diagonal
+ * @n: the size
+ * Return: nothing
+ */
 void print_diagonal(int n)
 {
-	int d = 0, i;
+	int i, j;
 
-	while (d < n)
+	if (n <= 0)
 	{
-		_putchar('\\');
 		_putchar('\n');
-		if (n == 1)
-			break;
-		else
+	}
+	else
+	{
+		for (i = 1; i <= n; i++)
 		{
-			i = 0;
-			while (i < n)
+			for (j = 1; j < i; j++)
 			{
 				_putchar(' ');
-				i++;
 			}
+			_putchar('\\');
+			_putchar('\n');
 		}
-		
-
+	}
+}
