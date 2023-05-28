@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * print_number - prints integers no matter the length
  * @n: the integer
@@ -11,6 +12,10 @@ void print_number(int n)
 	int num_digits = 1;
 	int temp = n;
 
+	if (n == INT_MIN)
+	{
+		return;
+	}
 	if (n < 0)
 	{
 		_putchar('-');
