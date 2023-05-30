@@ -8,6 +8,8 @@ void puts2(char *str)
 {
 	int i = 0;
 
+	if (str = "")
+		return;
 	_putchar(str[i]);
 	while (str[i + 1] != '\0' && str[i + 2] != '\0')
 	{
