@@ -3,8 +3,8 @@
  * _strcmp - compares two strings
  * @s1: string
  * @s2: string
- * Return: an int, 0 if they are similar, the difference of the different characters if
- * otherwise
+ * Return: an int, 0 if they are similar, the difference of the different
+ * characters if otherwise
  */
 int _strcmp(char *s1, char *s2)
 {
