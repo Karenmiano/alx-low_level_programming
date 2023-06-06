@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * _strstr - function that checks for a matching substring within a string
  * @haystack: string to be checked
