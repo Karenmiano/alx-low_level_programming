@@ -9,15 +9,15 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-        char *t = s;
+	char *t = s;
 
-        while (n)
-        {
-                *t = b;
-                t++;
-                n--;
-        }
-        return (s);
+	while (n)
+	{
+		*t = b;
+		t++;
+		n--;
+	}
+	return (s);
 }
 /**
  * _calloc - allocates memory and sets all bytes to zero
@@ -39,6 +39,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	_memset(ptr, 0, nmemb * size);
-	
+
 	return (ptr);
 }
