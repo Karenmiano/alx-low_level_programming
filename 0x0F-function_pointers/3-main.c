@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int a, b;
 	int (*action)(int, int);
 	char arr[] = {'+', '-', '*', '/', '%'};
-	
+
 	if (argc != 4)
 	{
 		printf("Error\n");
