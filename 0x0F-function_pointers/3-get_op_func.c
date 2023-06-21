@@ -1,6 +1,12 @@
 #include "3-calc.h"
 #include <stddef.h>
-
+/**
+ * get_op_func - fetches the correct arithmetic operation to
+ * be executed
+ * @s: holds address of required operation
+ * Return: pointer to function that will perform corresponding
+ * operation
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	int i = 0;
