@@ -30,8 +30,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (new);
 	}
 	trav = *head;
-	if (trav == NULL)
-		return (NULL);
 	while (trav != NULL)
 	{
 		if (find == idx - 1)
@@ -43,5 +41,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		trav = trav->next;
 		find++;
 	}
+	free(new);
 	return (NULL);
 }
