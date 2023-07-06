@@ -6,8 +6,8 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int dec = 0;
-	int i, size;
+	unsigned int dec = 0, max;
+	int i;
 
 	if (b == NULL)
 		return (0);
@@ -15,16 +15,16 @@ unsigned int binary_to_uint(const char *b)
 		;
 	if (b[i] != '\0')
 		return (0);
-	size = _strlen(b);
-	if (size > (int)(sizeof(unsigned int) * 8))
-		return (0);
-	for (i = 0; b[i] != '\0'; i++)
+	max = 4294967295;
+	for (i = 0; b[i] != '\0' && dec < max; i++)
 	{
 		if (b[i] == '1')
 		{
-			dec += 1 << (size - i - 1);
+			dec += 1 << (_strlen(b) - i - 1);
 		}
 	}
+	if (dec == max && b[i] != '\0')
+		return (0);
 	return (dec);
 }
 #include "main.h"
