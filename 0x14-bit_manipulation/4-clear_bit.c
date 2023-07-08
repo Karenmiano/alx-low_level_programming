@@ -10,9 +10,10 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	unsigned int num_bits;
 
 	num_bits = 8 * sizeof(unsigned long int);
+	/* Checks if index is within range of bits */
 	if (index >= num_bits)
 		return (-1);
-	if (*n & (1 << index))
-		*n = *n ^ (1 << index);
+	if (*n & (1 << index))/* Checks if bit at given index is ON */
+		*n = *n ^ (1 << index);/* if ON clears it */
 	return (1);
 }
