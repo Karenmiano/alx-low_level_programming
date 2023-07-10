@@ -26,10 +26,26 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buf);
 		return (0);
 	}
-	buf[letters] = '\0';
-	count = write(STDOUT_FILENO, buf, letters);
-	free(buf);
-	if (count != (ssize_t)letters)
+	if (count != 0)
+		buf[letters] = '\0';
+	count = write(STDOUT_FILENO, buf, _strlen(buf));
+	if (count != (ssize_t)_strlen(buf))
 		return (0);
+	free(buf);
 	return (count);
+}
+/**
+ * _strlen - finds the length of a string
+ * @s: address of the string
+ * Return: lenth of the string
+ */
+size_t _strlen(char *s)
+{
+	size_t i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
