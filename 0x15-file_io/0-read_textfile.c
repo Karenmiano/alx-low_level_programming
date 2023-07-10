@@ -30,8 +30,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		buf[letters] = '\0';
 	count = write(STDOUT_FILENO, buf, _strlen(buf));
 	if (count != (ssize_t)_strlen(buf))
+	{
+		free(buf);
 		return (0);
+	}
 	free(buf);
+	close(fd);
 	return (count);
 }
 /**
