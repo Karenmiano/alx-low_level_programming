@@ -32,9 +32,9 @@ int main(int ac, char *argv[])
 		if (chars_write == -1)
 			fail_read_write(99, argv[2]);
 	}
-	if (close(fd1))
+	if (close(fd1) == -1)
 		fail_close(fd1);
-	if (close(fd2))
+	if (close(fd2) == -1)
 		fail_close(fd2);
 	return (0);
 }
