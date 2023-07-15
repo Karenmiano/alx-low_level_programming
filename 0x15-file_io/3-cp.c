@@ -21,12 +21,22 @@ int main(int ac, char *argv[])
 		fail_read_write(98, argv[1]);
 	fd2 = open(argv[2], O_WRONLY | O_TRUNC | O_APPEND | O_CREAT, 0664);
 	if (fd2 == -1)
+	{
+		if (close(fd1) == -1)
+			fail_close(fd1);
 		fail_read_write(99, argv[2]);
+	}
 	while (chars_read != 0)
 	{
 		chars_read = read(fd1, buf, 1024);
 		if (chars_read == -1)
+		{
+			if (close(fd1) == -1)
+				fail_close(fd1);
+			else if(close(fd2) == -1)
+				fail_close(fd2);
 			fail_read_write(98, argv[1]);
+		}
 		chars_write = write(fd2, buf, chars_read);
 		if (chars_write == -1)
 			fail_read_write(99, argv[2]);
