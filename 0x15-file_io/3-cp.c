@@ -27,8 +27,7 @@ int main(int ac, char *argv[])
 		chars_read = read(fd1, buf, 1024);
 		if (chars_read == -1)
 			fail_read_write(98, argv[1]);
-		buf[chars_read] = '\0';
-		chars_write = write(fd2, buf, _strlen(buf));
+		chars_write = write(fd2, buf, chars_read);
 		if (chars_write == -1)
 			fail_read_write(99, argv[2]);
 	}
