@@ -6,8 +6,15 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *trav = head;
+	dlistint_t *trav;
 
+	if (head != NULL)
+	{
+		while (head->prev != NULL)
+		{
+			head = head->prev;
+		}
+	}
 	while (trav->next != NULL)
 	{
 		trav = trav->next;
