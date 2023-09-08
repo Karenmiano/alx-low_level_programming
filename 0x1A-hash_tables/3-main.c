@@ -13,7 +13,7 @@ int main(void)
     hash_table_t *ht;
     int i;
 
-    ht = hash_table_create(1024);
+    ht = hash_table_create(204);
     i = hash_table_set(ht, "betty", "cool");
     printf("%d\n", i);
     return (EXIT_SUCCESS);
