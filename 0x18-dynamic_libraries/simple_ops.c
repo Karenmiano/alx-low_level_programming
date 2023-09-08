@@ -1,6 +1,6 @@
-/*#include "main.h"*/
+#include "main.h"
 /**
- * iadd - performs addition
+ * add - performs addition
  * @a: integer
  * @b: integer
  * Return: a + b
