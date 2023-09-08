@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * key_index - generates an index for a key
+ * key_index - generates an index for a key after passing through djb2
  * @key: key for values
  * @size: size of the hash table
  * Return: index where we can store or retrieve values
