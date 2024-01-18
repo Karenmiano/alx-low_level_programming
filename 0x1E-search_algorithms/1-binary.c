@@ -3,7 +3,7 @@
 /**
  * binary_search - searches for value in sorted array using binary
  * search
- * @array: pointer to array
+ * @array: pointerS to array
  * @size: number of elements in array
  * @value: the value to be searched
  * Return: index of value found, - if value or array in doesn't exist
